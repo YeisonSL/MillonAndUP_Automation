@@ -1,20 +1,36 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# RestAssuredWithScreenPlay
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+## ⚙️ Descripción ⚙️
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+Este proyecto Gradle, el cual se encuentra implementado con el patrón de diseño Screenplay y tiene ejemplo de automatización de para reelizar la programación de una presentación, que se realizan en el portal https://newdesign.millionandup.com/.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+## 📦 Pre-requisitos 📦
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+* Java 8 o mayor.
+* Maven para gestión de librerías.
+* Serenity BDD Screenplay.
+* Cucumber 4 o mayor con Serenity BDD.
+* Serenity Rest , Serenity BDD Screenplay
+* Hamcrest
+
+## 🛠️ Paquetes 🛠️
+
+A continuación se describe que debe contener cada paquete del arquetipo base propuesto:
+
+* **enums**: Contiene un grupo de constantes agrupadas por clase que representan un comportamiento.
+* **exceptions**: Contiene la tipología de las excepciones que se quieren propagar en la ejecución de una automatización.
+* **models**: Contiene la representación de objetos del mundo real con sus características.
+* **questions**: Contiene aquellas clases que nos permiten realizar validaciones acerca del estado de los elementos.
+* **tasks**: Contiene en cada clase un conjunto de interacciones que le permiten al actor realizar una acción completa en el sistema.
+* **runners**: Contiene las clases que permiten ejecutar los features con relación uno a uno entre feature y clase.
+* **stepdefinitions**: Contiene las clases que implementan los pasos utilizados en los features a partir de los cuales se pueden invocar tareas (tasks) o preguntas (questions).
+* **features**: Contiene las historias de usuario en lenguaje Gherkin con narrativa declarativa en términos de negocio.
+
+## 📋 Para generar el Reporte 📋
+
+Ingrese a la terminal de comandos puede ser de su IDE y ejecute el siguiente comando:
+
+      "gradle clean test aggregate"
+
+Se generará el reporte en la carpeta **/target/site/serenity/**, archivo **_index.htlm_**
